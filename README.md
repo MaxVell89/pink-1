@@ -1,7 +1,7 @@
 # Проект «Pink»
 
 * Студент: [Анна Васильева](https://htmlacademy.ru/profile/id31877).
-* Наставник: `Unknown`.
+* Наставник: [Софья Ильинова](https://htmlacademy.ru/profile/i).
 
 --
 
