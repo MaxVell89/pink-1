@@ -9,7 +9,122 @@
 
 <body>
 
-  <p>Репозиторий создан для обучения на продвинутом онлайн-интенсиве «<a href="https://htmlacademy.ru/advanced_intensive">Создание веб-интерфейсов с помощью HTML и CSS</a>».</p>
+  <!-- Header -->
+  <header>
+    <nav>
+      <h1 class="menu-title">Pink</h1>
+      <ul class="menu">
+        <li><a href="#">Информация</a></li>
+        <li><a href="#">Возможности</a></li>
+        <li><a href="#">Отзывы</a></li>
+        <li><a href="#">Стоимость</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <main>
+
+    <!-- Promo section -->
+    <section class="promo">
+      <section class="promo-main">
+        <p>Взгляните на жизнь иначе!</p>
+      </section>
+
+      <!-- Download buttons -->
+      <section class="promo-download">
+        <a class="download-link" href="#">Скачать приложение</a>
+        <ul class="download-buttons">
+          <li class="download-button-apple"><a  href="#">Apple</a></li>
+          <li class="download-button-android"><a href="#">Android</a></li>
+          <li class="download-button-winphone"><a href="#">Windows Phone</a></li>
+        </ul>
+        <p>Доступно для iPhone, iPad, Android, Windows Phone, Mac OS, Windows 8</p>
+      </section>
+
+      <!-- Product promo features -->
+      <section class="promo-offer">
+        <p class="offer-title">Устали от серости мегаполиса?</p>
+        <p class="offer-title">Нам есть, что вам предложить!</p>
+      </section>
+      <section class="promo-features">
+        <ul>
+          <li class="feature">
+            <p class="feature-header">Поднимает настроение</p>
+            <p class="feature-text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+          </li>
+          <li class="feature">
+            <p class="feature-header">Меняет мир вокруг</p>
+            <p class="feature-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="feature">
+            <p class="feature-header">Заводит новых друзей</p>
+            <p class="feature-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews-slider">
+      <div class="review-slide">
+        <p class="review-name">Николай Петров</p>
+        <p class="review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+      </div>
+    </section>
+
+      <!-- Price options -->
+    <section class="price-option-slider">
+      <div class="price-option-slides">
+        <div class="price-option-slide">
+          <p class="option-header">База</p>
+          <p class="option-cost">1,99 USD</p>
+          <ul class="option-content">
+            <li class="option-element">Розовый фильтр</li>
+            <li class="option-element not-included">Смайлики</li>
+            <li class="option-element not-included">Комментарии</li>
+          </ul>
+        </div>
+        <div class="price-option-slide">
+          <p class="option-header">Стандарт</p>
+          <p class="option-cost">3,99 USD</p>
+          <ul class="option-content">
+            <li class="option-element">Розовый фильтр</li>
+            <li class="option-element">Смайлики</li>
+            <li class="option-element not-included">Комментарии</li>
+          </ul>
+        </div>
+        <div class="price-option-slide">
+          <p class="option-header">Анлим</p>
+          <p class="option-cost">9,99 USD</p>
+          <ul class="option-content">
+            <li class="option-element">Розовый фильтр</li>
+            <li class="option-element">Смайлики</li>
+            <li class="option-element">Комментарии</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section class="contacts" itemscope itemtype="http://schema.org/Organization">
+      <p class="contacts-header">Остались вопросы? Свяжитесь с нами!</p>
+      <div class="phone">
+        <p class="contact-header">Звоните:</p>
+        <a class="contact-text" href="tel:+78001000900" itemprop="telephone">8 (800) 1000 900</a>
+      </div>
+      <div class="phone">
+        <p class="contact-header">Пишите:</p>
+        <a class="contact-text" href="mailto:hello@pinkapp.ru" itemprop="email">hello@pinkapp.ru</a>
+      </div>
+      <div class="phone">
+        <p class="contact-header">Приезжайте в гости:</p>
+        <p class="contact-text" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Санкт-Петербург</span>, <span itemprop="streetAddress">Невский проспект, д. 20</span></p>
+      </div>
+      <div class="map"></div>
+    </section>
+
+  </main>
 
   <!-- <script src="js/script.js"></script> -->
 
