@@ -10,118 +10,117 @@
 <body>
 
   <!-- Header -->
-  <header>
-    <nav>
-      <h1 class="menu-title">Pink</h1>
-      <ul class="menu">
-        <li><a href="#">Информация</a></li>
-        <li><a href="#">Возможности</a></li>
-        <li><a href="#">Отзывы</a></li>
-        <li><a href="#">Стоимость</a></li>
+  <header class="page-header">
+    <nav class="main-nav">
+      <h1 class="main-nav__title">Pink</h1>
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Информация</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Возможности</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Отзывы</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Стоимость</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Content -->
-  <main>
+  <main class="main-content">
 
     <!-- Promo section -->
     <section class="promo">
-      <section class="promo-main">
-        <p>Взгляните на жизнь иначе!</p>
-      </section>
+      <div class="promo-header">
+        <p class="promo-header__text">Взгляните на жизнь иначе!</p>
+      </div>
 
       <!-- Download buttons -->
       <section class="promo-download">
-        <a class="download-link" href="#">Скачать приложение</a>
-        <ul class="download-buttons">
-          <li class="download-button-apple"><a  href="#">Apple</a></li>
-          <li class="download-button-android"><a href="#">Android</a></li>
-          <li class="download-button-winphone"><a href="#">Windows Phone</a></li>
-        </ul>
-        <p>Доступно для iPhone, iPad, Android, Windows Phone, Mac OS, Windows 8</p>
-      </section>
-
-      <!-- Product promo features -->
-      <section class="promo-offer">
-        <p class="offer-title">Устали от серости мегаполиса?</p>
-        <p class="offer-title">Нам есть, что вам предложить!</p>
-      </section>
-      <section class="promo-features">
-        <ul>
-          <li class="feature">
-            <p class="feature-header">Поднимает настроение</p>
-            <p class="feature-text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-          </li>
-          <li class="feature">
-            <p class="feature-header">Меняет мир вокруг</p>
-            <p class="feature-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li class="feature">
-            <p class="feature-header">Заводит новых друзей</p>
-            <p class="feature-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
+        <a class="promo-download__main-link" href="#">Скачать приложение</a>
+        <div class="promo-download__buttons">
+          <a class="promo-download__button promo-download__button--apple" href="#">Apple</a>
+          <a class="promo-download__button promo-download__button--android" href="#">Android</a>
+          <a class="promo-download__button promo-download__button--winphone" href="#">Windows Phone</a>
+        </div>
+        <p class="promo-download__text">Доступно для iPhone, iPad, Android, Windows Phone, Mac OS, Windows 8</p>
       </section>
     </section>
 
-    <!-- Reviews -->
-    <section class="reviews-slider">
-      <div class="review-slide">
-        <p class="review-name">Николай Петров</p>
-        <p class="review-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+    <!-- Product offers -->
+    <section class="offer">
+      <p class="offer__title">Устали от серости мегаполиса?</p>
+      <p class="offer__title">Нам есть, что вам предложить!</p>
+    </section>
+
+    <!-- Product features -->
+    <section class="features">
+      <div class="features__item">
+        <p class="features__header">Поднимает настроение</p>
+        <p class="features__descr">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+      </div>
+      <div class="features__item">
+        <p class="features__header">Меняет мир вокруг</p>
+        <p class="features__descr">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      </div>
+      <div class="features__item">
+        <p class="features__header">Заводит новых друзей</p>
+        <p class="features__descr">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
       </div>
     </section>
 
+
+    <!-- Reviews -->
+    <section class="review slider">
+      <article class="review__item slider__slide">
+        <p class="review__header">Николай Петров</p>
+        <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+      </article>
+    </section>
+
       <!-- Price options -->
-    <section class="price-option-slider">
-      <div class="price-option-slides">
-        <div class="price-option-slide">
-          <p class="option-header">База</p>
-          <p class="option-cost">1,99 USD</p>
-          <ul class="option-content">
-            <li class="option-element">Розовый фильтр</li>
-            <li class="option-element not-included">Смайлики</li>
-            <li class="option-element not-included">Комментарии</li>
-          </ul>
-        </div>
-        <div class="price-option-slide">
-          <p class="option-header">Стандарт</p>
-          <p class="option-cost">3,99 USD</p>
-          <ul class="option-content">
-            <li class="option-element">Розовый фильтр</li>
-            <li class="option-element">Смайлики</li>
-            <li class="option-element not-included">Комментарии</li>
-          </ul>
-        </div>
-        <div class="price-option-slide">
-          <p class="option-header">Анлим</p>
-          <p class="option-cost">9,99 USD</p>
-          <ul class="option-content">
-            <li class="option-element">Розовый фильтр</li>
-            <li class="option-element">Смайлики</li>
-            <li class="option-element">Комментарии</li>
-          </ul>
-        </div>
+    <section class="price slider">
+      <div class="price__item slider__slide">
+        <p class="price__header">База</p>
+        <p class="price__cost">1,99 USD</p>
+        <ul class="price__content-list">
+          <li class="price__content-item">Розовый фильтр</li>
+          <li class="price__content-item price__content-item--not-included">Смайлики</li>
+          <li class="price__content-item price__content-item--not-included">Комментарии</li>
+        </ul>
+      </div>
+      <div class="price__item slider__slide">
+        <p class="price__header">Стандарт</p>
+        <p class="price__cost">3,99 USD</p>
+        <ul class="price__content-list">
+          <li class="price__content-item">Розовый фильтр</li>
+          <li class="price__content-item">Смайлики</li>
+          <li class="price__content-item price__content-item--not-included">Комментарии</li>
+        </ul>
+      </div>
+      <div class="price__item slider__slide">
+        <p class="price__header">Анлим</p>
+        <p class="price__cost">9,99 USD</p>
+        <ul class="price__content-list">
+          <li class="price__content-item">Розовый фильтр</li>
+          <li class="price__content-item">Смайлики</li>
+          <li class="price__content-item">Комментарии</li>
+        </ul>
       </div>
     </section>
 
     <!-- Contacts -->
     <section class="contacts" itemscope itemtype="http://schema.org/Organization">
-      <p class="contacts-header">Остались вопросы? Свяжитесь с нами!</p>
-      <div class="phone">
-        <p class="contact-header">Звоните:</p>
-        <a class="contact-text" href="tel:+78001000900" itemprop="telephone">8 (800) 1000 900</a>
+      <p class="contacts__header">Остались вопросы? Свяжитесь с нами!</p>
+      <div class="contacts__item">
+        <p class="contacts__item-header">Звоните:</p>
+        <a class="contacts__item-text" href="tel:+78001000900" itemprop="telephone">8 (800) 1000 900</a>
       </div>
-      <div class="phone">
-        <p class="contact-header">Пишите:</p>
-        <a class="contact-text" href="mailto:hello@pinkapp.ru" itemprop="email">hello@pinkapp.ru</a>
+      <div class="contacts__item">
+        <p class="contacts__item-header">Пишите:</p>
+        <a class="contacts__item-text" href="mailto:hello@pinkapp.ru" itemprop="email">hello@pinkapp.ru</a>
       </div>
-      <div class="phone">
-        <p class="contact-header">Приезжайте в гости:</p>
-        <p class="contact-text" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Санкт-Петербург</span>, <span itemprop="streetAddress">Невский проспект, д. 20</span></p>
+      <div class="contacts__item">
+        <p class="contacts__item-header">Приезжайте в гости:</p>
+        <p class="contacts__item-text" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Санкт-Петербург</span>, <span itemprop="streetAddress">Невский проспект, д. 20</span></p>
       </div>
-      <div class="map"></div>
+      <div class="contacts__map"></div>
     </section>
 
   </main>
