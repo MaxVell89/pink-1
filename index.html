@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
   <title>HTML Academy: Pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -12,8 +14,11 @@
   <!-- Header -->
   <header class="page-header">
     <nav class="main-nav">
-      <h1 class="main-nav__title">Pink</h1>
-      <ul class="main-nav__list">
+      <div class="main-nav__menu-header main-nav__menu-header">
+        <h1 class="main-nav__title">Pink</h1>
+        <a class="main-nav__button main-nav__button" href="#">Меню</a>
+      </div>
+      <ul class="main-nav__list main-nav__list">
         <li class="main-nav__item"><a class="main-nav__link" href="#">Информация</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="#">Возможности</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="#">Отзывы</a></li>
@@ -72,22 +77,32 @@
         <p class="review__header">Николай Петров</p>
         <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
       </article>
+      <!-- Hidden by CSS, to be activated by JS -->
+      <div class="slider__toggle">
+        <span class="slider__button slider__button--active"></span>
+        <span class="slider__button"></span>
+        <span class="slider__button"></span>
+      </div>
     </section>
 
       <!-- Price options -->
     <section class="price slider">
       <div class="price__item slider__slide">
-        <p class="price__header">База</p>
-        <p class="price__cost">1,99 USD</p>
+        <div class="price__header">
+          <p class="price__title">База</p>
+          <p class="price__cost">1,99 USD</p>
+        </div>
         <ul class="price__content-list">
           <li class="price__content-item">Розовый фильтр</li>
           <li class="price__content-item price__content-item--not-included">Смайлики</li>
           <li class="price__content-item price__content-item--not-included">Комментарии</li>
         </ul>
       </div>
-      <div class="price__item slider__slide">
-        <p class="price__header">Стандарт</p>
-        <p class="price__cost">3,99 USD</p>
+      <div class="price__item price__item--hit slider__slide">
+        <div class="price__header">
+          <p class="price__title">Стандарт</p>
+          <p class="price__cost">3,99 USD</p>
+        </div>
         <ul class="price__content-list">
           <li class="price__content-item">Розовый фильтр</li>
           <li class="price__content-item">Смайлики</li>
@@ -95,14 +110,23 @@
         </ul>
       </div>
       <div class="price__item slider__slide">
-        <p class="price__header">Анлим</p>
-        <p class="price__cost">9,99 USD</p>
+        <div class="price__header">
+          <p class="price__title">Анлим</p>
+          <p class="price__cost">9,99 USD</p>
+        </div>
         <ul class="price__content-list">
           <li class="price__content-item">Розовый фильтр</li>
           <li class="price__content-item">Смайлики</li>
           <li class="price__content-item">Комментарии</li>
         </ul>
       </div>
+      <!-- Hidden by CSS, to be activated by JS -->
+      <div class="slider__toggle">
+        <span class="slider__button"></span>
+        <span class="slider__button slider__button--active"></span>
+        <span class="slider__button"></span>
+    </div>
+    </section>
     </section>
 
     <!-- Contacts -->
@@ -126,6 +150,6 @@
   </main>
 
   <!-- <script src="js/script.js"></script> -->
-
+  <script src="http://127.0.0.1:35729/livereload.js"></script>
 </body>
 </html>
