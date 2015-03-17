@@ -7,7 +7,10 @@ module.exports = function(grunt) {
     lintspaces: {
       all: {
         src: [
-          '*.html'
+          '*.html',
+          'less/**/*.less',
+          '*.js',
+          'js/**/*.js'
         ],
         options: {
           newline: true,
