@@ -1,0 +1,78 @@
+.page-header {
+  position: relative;
+}
+
+.main-nav {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+// Modifier to be added by JS:
+.main-nav__menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 65px;
+  padding: 0 6%;
+  font-size: 0;
+  box-shadow: @box-shadow-dark;
+  background: @black-transparent;
+
+  &--opened {
+    min-height: 65px;
+    padding-bottom: 5px;
+    background: @blue-medium;
+  }
+}
+
+.main-nav__title {
+  width: 74px;
+  height: 24px;
+  background: url(../img/logo-mobile.png) no-repeat;
+}
+
+.main-nav__button {
+  font-size: 0;
+  width: 50px;
+  height: 24px;
+  background-image: data-uri('../img/main-nav__button-hamburger.png');
+  background-size: 50px auto;
+  background-repeat: no-repeat;
+
+  // Modifier to be added by JS:
+  &--close {
+    width: 23px;
+    height: 22px;
+    background-image: data-uri('../img/main-nav__button-cross.png');
+    background-size: 23px auto;
+    background-repeat: no-repeat;
+  }
+}
+
+.main-nav__list {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+
+  // Modifier to be hidden by JS:
+  &--opened {
+    display: block;
+  }
+}
+
+.main-nav__item {
+  background: @blue-medium;
+  box-shadow: @box-shadow-dark, @box-shadow-light;
+}
+
+.main-nav__link {
+  display: block;
+  font-size: @font-size-medium;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 65px;
+  color: @white;
+}

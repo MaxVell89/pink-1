@@ -1,0 +1,76 @@
+.promo {
+  text-align: center;
+  color: @white;
+}
+
+.promo-header {
+  min-height: 460px;
+  padding: 0 20px;
+  background: url(../img/promo-header_bgr-hand-mobile.jpg) 50% 175px no-repeat,
+              url(../img/promo-header_bgr-blue-mobile.jpg) 50% 0% no-repeat;
+  background-size: contain, cover;
+
+  &__text {
+    padding-top: 85px;
+    text-align: center;
+    font-size: @font-size-big;
+    line-height: 30px;
+    font-weight: @light;
+    color: @white;
+  }
+}
+
+.promo-download {
+  padding: 25px 20px 30px;
+  background-color: @blue-dark;
+  color: @white;
+}
+
+.promo-download__main-link {
+  display: block;
+  max-width: 280px;
+  margin: 0 auto 15px;
+  padding: 0 35px;
+  border: 3px solid white;
+  border-radius: 25px;
+  font-size: @font-size-medium;
+  line-height: 50px;
+  font-weight: bold;
+  color: @white;
+}
+
+.promo-download__text {
+  font-size: @font-size-base;
+  line-height: 25px;
+  font-weight: @light;
+}
+
+.promo-download__buttons {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 0;
+}
+
+.promo-download__button {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 30px;
+  width: 50px;
+  height: 60px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--apple {
+    background-image: url(../img/promo-download__button--apple.png);
+  }
+
+  &--android {
+    background-image: url(../img/promo-download__button--android.png);
+  }
+
+  &--winphone {
+    background-image: url(../img/promo-download__button--winphone.png);
+  }
+}

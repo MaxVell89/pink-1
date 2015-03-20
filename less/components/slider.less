@@ -1,0 +1,33 @@
+.slider {
+  text-align: center;
+}
+
+.slider__toggle {
+  visibility: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 3;
+  font-size: 0;
+}
+
+.slider__button {
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: content-box;
+  width: 6px;
+  height: 6px;
+  margin-right: 20px;
+  background: @gray-dark;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--active {
+    background-color: @white;
+    box-shadow: 0 0 0 3px @blue-medium;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

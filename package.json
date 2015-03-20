@@ -16,7 +16,15 @@
   },
   "homepage": "https://github.com/up-htmlacademy/31877-Pink",
   "devDependencies": {
+    "autoprefixer-core": "^5.1.7",
+    "csswring": "^3.0.0",
     "grunt": "^0.4.5",
-    "grunt-lintspaces": "^0.6.0"
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-lintspaces": "^0.6.0",
+    "grunt-postcss": "^0.3.0"
+  },
+  "dependencies": {
+    "normalize.css": "^3.0.2"
   }
 }

@@ -1,0 +1,92 @@
+.price {
+  padding: 25px 20px 40px;
+  text-align: center;
+  background: @gray-light;
+}
+
+.price__item {
+  margin-bottom: 35px;
+  text-align: center;
+  border: 2px solid @gray-medium;
+  line-height: 30px;
+  position: relative;
+
+  &--hit {
+    overflow: hidden;
+
+    &:before {
+      display: block;
+      content: "Хит";
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      position: absolute;
+      top: 11px;
+      left: -28px;
+      transform: rotate(-45deg);
+      text-align: center;
+      text-transform: uppercase;
+      background-color: @red;
+      color: @white;
+
+    }
+  }
+}
+
+.price__header {
+  width: 100%;
+  padding: 20px;
+  text-transform: uppercase;
+  background-color: @blue-medium;
+  color: @white;
+}
+
+.price__title {
+  font-size: @font-size-medium;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+.price__cost {
+  font-size: @font-size-big;
+  line-height: 35px;
+  font-weight: @light;
+}
+
+.price__content-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.price__content-item {
+  position: relative;
+  padding: 0 20px;
+  text-align: left;
+  font-size: @font-size-base;
+  text-transform: uppercase;
+  line-height: 60px;
+  border-top: 2px solid @gray-medium;
+  background-color: @white;
+  color: @blue-medium;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:after {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    margin-top: -15px;
+    background: data-uri('../img/price__content-item--included.png') no-repeat;
+  }
+
+  &--not-included:after {
+    background-image: data-uri('../img/price__content-item--not-included.png');
+  }
+}
