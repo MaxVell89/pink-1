@@ -1,7 +1,12 @@
 .price {
-  padding: 25px 20px 40px;
+  padding: 25px 20px 55px;
   text-align: center;
   background: @gray-light;
+
+  @media @tablet {
+    font-size: 0;
+    padding: 15px 40px 35px;
+  }
 }
 
 .price__item {
@@ -11,6 +16,14 @@
   line-height: 30px;
   position: relative;
 
+  @media @tablet {
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 25%;
+    margin-right: -2px;
+    font-size: 0;
+  }
+
   &--hit {
     overflow: hidden;
 
@@ -19,6 +32,7 @@
       content: "Хит";
       width: 100px;
       height: 30px;
+      font-size: @font-size-base;
       line-height: 30px;
       position: absolute;
       top: 11px;
@@ -29,6 +43,9 @@
       background-color: @red;
       color: @white;
 
+      @media @tablet {
+        top: 5px;
+      }
     }
   }
 }
@@ -39,18 +56,32 @@
   text-transform: uppercase;
   background-color: @blue-medium;
   color: @white;
+
+  @media @tablet {
+    padding: 15px 0 10px;
+  }
 }
 
 .price__title {
   font-size: @font-size-medium;
   line-height: 25px;
   font-weight: bold;
+
+  @media @tablet {
+    font-size: @font-size-base + 2; // 16px
+    line-height: 30px;
+  }
 }
 
 .price__cost {
   font-size: @font-size-big;
   line-height: 35px;
   font-weight: @light;
+
+  @media @tablet {
+    font-size: @font-size-small_tablet;
+    line-height: 25px;
+  }
 }
 
 .price__content-list {
@@ -70,6 +101,12 @@
   background-color: @white;
   color: @blue-medium;
 
+  @media @tablet {
+    padding-left: 20px;
+    font-size: 0;
+    line-height: 45px;
+  }
+
   &:first-child {
     border-top: none;
   }
@@ -80,13 +117,35 @@
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 50%;
+    top: calc(~"50% - 15px");
     right: 18px;
-    margin-top: -15px;
     background: data-uri('../img/price__content-item--included.png') no-repeat;
+
+    @media @tablet {
+      right: calc(~"50% - 15px");
+    }
   }
 
   &--not-included:after {
     background-image: data-uri('../img/price__content-item--not-included.png');
+  }
+}
+
+.price__options {
+  display: none;
+
+  @media @tablet {
+    display: inline-block;
+    vertical-align: bottom;
+    line-height: 30px;
+  }
+}
+
+.price__options-item {
+  font-size: @font-size-base;
+  text-transform: none;
+
+  &:after {
+    display: none;
   }
 }

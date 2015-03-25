@@ -1,7 +1,11 @@
 .offer {
-  padding: 35px 0 90px 0;
+  padding: 35px 0 95px;
   text-align: center;
-  background: linear-gradient(-5deg, @gray-light 60px, @gray-light-transparent 60px, @gray-light-transparent 61px, transparent 61px);
+  .sloped();
+
+  @media @tablet {
+    padding-top: 45px;
+  }
 }
 
 .offer__title {
@@ -11,7 +15,19 @@
   font-weight: @light;
   color: @blue-medium;
 
+  @media @tablet {
+    margin-bottom: 0;
+    font-size: @font-size-big_tablet;
+    line-height: 50px;
+  }
+
   &:last-child {
     margin-bottom: 0;
+
+    @media @tablet {
+      padding: 0 25%;
+      margin-bottom: 20px;
+    }
   }
+
 }

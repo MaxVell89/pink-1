@@ -2,13 +2,13 @@
   position: relative;
 }
 
-.main-nav {
+// Modifier to be added by JS:
+.main-nav--hidden {
   width: 100%;
   position: absolute;
   z-index: 2;
 }
 
-// Modifier to be added by JS:
 .main-nav__menu-header {
   display: flex;
   justify-content: space-between;
@@ -16,13 +16,18 @@
   min-height: 65px;
   padding: 0 6%;
   font-size: 0;
-  box-shadow: @box-shadow-dark;
-  background: @black-transparent;
+  padding-bottom: 5px;
+  background: @blue-medium;
 
-  &--opened {
-    min-height: 65px;
-    padding-bottom: 5px;
-    background: @blue-medium;
+  @media @tablet {
+    min-height: 110px;
+  }
+
+  // Modifier to be added by JS:
+  &--hidden {
+    padding-bottom: 0px;
+    background: @black-transparent;
+    box-shadow: @box-shadow-dark;
   }
 }
 
@@ -30,36 +35,42 @@
   width: 74px;
   height: 24px;
   background: url(../img/logo-mobile.png) no-repeat;
+
+  @media @tablet {
+    width: 146px;
+    height: 40px;
+    background: url(../img/logo-tablet.png) no-repeat;
+    margin-bottom: 15px;
+  }
 }
 
 .main-nav__button {
   font-size: 0;
-  width: 50px;
-  height: 24px;
-  background-image: data-uri('../img/main-nav__button-hamburger.png');
-  background-size: 50px auto;
-  background-repeat: no-repeat;
+  width: 23px;
+  height: 23px;
+  background: data-uri('../img/main-nav__button-cross.png') no-repeat;
+  background-size: 23px auto;
 
   // Modifier to be added by JS:
-  &--close {
-    width: 23px;
-    height: 22px;
-    background-image: data-uri('../img/main-nav__button-cross.png');
-    background-size: 23px auto;
-    background-repeat: no-repeat;
+  &--open {
+    width: 50px;
+    height: 24px;
+    background: data-uri('../img/main-nav__button-hamburger.png') no-repeat;
+    background-size: 50px auto;
   }
 }
 
 .main-nav__list {
-  display: none;
+  display: block;
   padding: 0;
   margin: 0;
   list-style: none;
   text-align: center;
+  border-bottom: 1px solid @black;
 
   // Modifier to be hidden by JS:
-  &--opened {
-    display: block;
+  &--hidden {
+    display: none;
   }
 }
 

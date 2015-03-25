@@ -1,4 +1,5 @@
 @mobile: 320px;
+@tablet: e("screen and (min-width: 700px)");
 
 @black: #000;
 @black-transparent: rgba(0, 0, 0, .3);
@@ -14,9 +15,23 @@
 @box-shadow-light: inset 0 1px 0 rgba(255, 255, 255, 0.15);
 @box-shadow-dark: 0 -1px 0 #000;
 
-@font-size-base: 1rem; // 14px
+@font-size-base: 14px;
 @font-size-h1: 32px;
 @font-size-medium: 18px;
 @font-size-big: 24px;
 
+@font-size-small_tablet: 18px;
+@font-size-medium_tablet: 24px;
+@font-size-big_tablet: 40px;
+
 @light: 300;
+
+.sloped() {
+    background: linear-gradient(-5deg, @gray-light 65px, fade(@gray-light, 0.5) 65px, fade(@gray-light, 0.5) 66px, transparent 66px);
+    @media @tablet {
+        background: linear-gradient(-3deg, @gray-light 65px, fade(@gray-light, 0.5) 65px, fade(@gray-light, 0.5) 66px, transparent 66px);
+    }
+    // @media @desktop {
+    //     background: linear-gradient(-3deg, @gray-light 65px, fade(@gray-light, 0.5) 65px, fade(@gray-light, 0.5) 66px, transparent 66px);
+    // }
+}
