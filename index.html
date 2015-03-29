@@ -13,12 +13,12 @@
 
   <!-- Header -->
   <header class="page-header">
-    <nav class="main-nav">
-      <div class="main-nav__menu-header main-nav__menu-header">
+    <nav class="main-nav main-nav--hidden">
+      <div class="main-nav__menu-header main-nav__menu-header--hidden">
         <h1 class="main-nav__title">Pink</h1>
-        <a class="main-nav__button main-nav__button" href="#">Меню</a>
+        <a class="main-nav__button main-nav__button--open" href="#">Меню</a>
       </div>
-      <ul class="main-nav__list main-nav__list">
+      <ul class="main-nav__list main-nav__list--hidden">
         <li class="main-nav__item"><a class="main-nav__link" href="#">Информация</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="#">Возможности</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="#">Отзывы</a></li>
@@ -44,7 +44,7 @@
           <a class="promo-download__button promo-download__button--android" href="#">Android</a>
           <a class="promo-download__button promo-download__button--winphone" href="#">Windows Phone</a>
         </div>
-        <p class="promo-download__text">Доступно для iPhone, iPad, Android, Windows Phone, Mac OS, Windows 8</p>
+        <p class="promo-download__text">Доступно для iPhone, iPad, Android,<br> Windows Phone, Mac OS, Windows 8</p>
       </section>
     </section>
 
@@ -70,12 +70,21 @@
       </div>
     </section>
 
+    <!-- Research -->
+    <section class="research">
+      <div class="research__header">Эффект на&nbsp;24&nbsp;часа!</div>
+      <p class="research__text">Британские ученые провели исследования и&nbsp;доказали, что положительный эффект от
+      использования приложения длится целые&nbsp;сутки!</p>
+      <a class="research__link">Узнать больше об исследовании</a>
+    </section>
 
     <!-- Reviews -->
     <section class="review slider">
       <article class="review__item slider__slide">
         <p class="review__header">Николай Петров</p>
-        <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+        <p class="review__description">25 лет, водитель трамвая</p>
+        <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+        А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
       </article>
       <!-- Hidden by CSS, to be activated by JS -->
       <div class="slider__toggle">
@@ -87,6 +96,13 @@
 
       <!-- Price options -->
     <section class="price slider">
+      <div class="price__item price__options">
+        <ul class="price__content-list">
+          <li class="price__content-item price__options-item">Розовый фильтр</li>
+          <li class="price__content-item price__options-item">Смайлики</li>
+          <li class="price__content-item price__options-item">Комментарии</li>
+        </ul>
+      </div>
       <div class="price__item slider__slide">
         <div class="price__header">
           <p class="price__title">База</p>
@@ -121,7 +137,7 @@
         </ul>
       </div>
       <!-- Hidden by CSS, to be activated by JS -->
-      <div class="slider__toggle">
+      <div class="slider__toggle slider__price-toggle">
         <span class="slider__button"></span>
         <span class="slider__button slider__button--active"></span>
         <span class="slider__button"></span>
@@ -131,23 +147,41 @@
 
     <!-- Contacts -->
     <section class="contacts" itemscope itemtype="http://schema.org/Organization">
-      <p class="contacts__header">Остались вопросы? Свяжитесь с нами!</p>
-      <div class="contacts__item">
-        <p class="contacts__item-header">Звоните:</p>
-        <a class="contacts__item-text" href="tel:+78001000900" itemprop="telephone">8 (800) 1000 900</a>
-      </div>
-      <div class="contacts__item">
-        <p class="contacts__item-header">Пишите:</p>
-        <a class="contacts__item-text" href="mailto:hello@pinkapp.ru" itemprop="email">hello@pinkapp.ru</a>
-      </div>
-      <div class="contacts__item">
-        <p class="contacts__item-header">Приезжайте в гости:</p>
-        <p class="contacts__item-text" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Санкт-Петербург</span>, <span itemprop="streetAddress">Невский проспект, д. 20</span></p>
+      <p class="contacts__header">Остались вопросы?<br> Свяжитесь с нами!</p>
+      <div class="contacts__items">
+        <div class="contacts__item">
+          <p class="contacts__item-header">Звоните:</p>
+          <a class="contacts__item-text" href="tel:+78001000900" itemprop="telephone">8 (800) 1000 900</a>
+        </div>
+        <div class="contacts__item">
+          <p class="contacts__item-header">Пишите:</p>
+          <a class="contacts__item-text" href="mailto:hello@pinkapp.ru" itemprop="email">hello@pinkapp.ru</a>
+        </div>
+        <div class="contacts__item">
+          <p class="contacts__item-header">Приезжайте в гости:</p>
+          <p class="contacts__item-text" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="addressLocality">Санкт-Петербург</span>,<br> <span itemprop="streetAddress">Невский проспект, д. 20</span>
+          </p>
+        </div>
       </div>
       <div class="contacts__map"></div>
     </section>
 
   </main>
+
+  <footer class="page-footer">
+    <a class="page-footer__logo">Pink</a>
+    <div class="social-links">
+      <a class="social-links__item social-links__item--twitter" href="#">Twitter</a>
+      <a class="social-links__item social-links__item--fb" href="#">Facebook</a>
+      <a class="social-links__item social-links__item--youtube" href="#">YouTube</a>
+    </div>
+    <div class="page-footer__copyright">
+      <p class="page-footer__copyright-text">Website by <a class="page-footer__copyright-link page-footer__copyright-link--by"
+      href="#">Anton Glukhanko</a> for <a class="page-footer__copyright-link page-footer__copyright-link--for"
+      href="#">HTML Academy</a></p>
+    </div>
+  </footer>
 
   <!-- <script src="js/script.js"></script> -->
   <script src="http://127.0.0.1:35729/livereload.js"></script>

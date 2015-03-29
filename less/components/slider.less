@@ -3,12 +3,14 @@
 }
 
 .slider__toggle {
-  visibility: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  z-index: 3;
+  // visibility: hidden;
   font-size: 0;
+}
+
+.slider__price-toggle {
+  @media @tablet {
+    display: none;
+  }
 }
 
 .slider__button {
