@@ -1,16 +1,31 @@
 .price {
-  padding: 25px 20px 55px;
+  padding: 65px 20px 50px;
   text-align: center;
   background: @gray-light;
 
   @media @tablet {
     font-size: 0;
-    padding: 15px 40px 35px;
+    padding: 30px 40px;
+  }
+
+  @media @desktop {
+    padding: 55px 10% 50px;
+  }
+
+  @media @desktop-full {
+    padding-left: 17%;
+    padding-right: 17%;
+  }
+}
+
+.price__price-table {
+  @media @desktop {
+    margin: 0 10px;
   }
 }
 
 .price__item {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   text-align: center;
   border: 2px solid @gray-medium;
   line-height: 30px;
@@ -28,7 +43,6 @@
     overflow: hidden;
 
     &:before {
-      display: block;
       content: "Хит";
       width: 100px;
       height: 30px;
@@ -46,6 +60,11 @@
       @media @tablet {
         top: 5px;
       }
+
+      @media @desktop {
+        top: 10px;
+        width: 110px;
+      }
     }
   }
 }
@@ -60,6 +79,10 @@
   @media @tablet {
     padding: 15px 0 10px;
   }
+
+  @media @desktop {
+    padding: 15px 0 20px;
+  }
 }
 
 .price__title {
@@ -69,6 +92,11 @@
 
   @media @tablet {
     font-size: @font-size-base + 2; // 16px
+    line-height: 30px;
+  }
+
+  @media @desktop {
+    font-size: @font-size-small_desktop;
     line-height: 30px;
   }
 }
@@ -81,6 +109,11 @@
   @media @tablet {
     font-size: @font-size-small_tablet;
     line-height: 25px;
+  }
+
+  @media @desktop {
+    font-size: 24px;
+    line-height: 35px;
   }
 }
 
@@ -98,36 +131,29 @@
   text-transform: uppercase;
   line-height: 60px;
   border-top: 2px solid @gray-medium;
-  background-color: @white;
   color: @blue-medium;
+  background: @white data-uri('../img/price__content-item--included.svg') no-repeat;
+  background-position: 93% 50%;
 
   @media @tablet {
     padding-left: 20px;
     font-size: 0;
     line-height: 45px;
+    background-position-x: 50%;
+  }
+
+  @media @desktop {
+    padding-left: 20px;
+    font-size: 0;
+    line-height: 60px;
   }
 
   &:first-child {
     border-top: none;
   }
 
-  &:after {
-    display: block;
-    content: "";
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: calc(~"50% - 15px");
-    right: 18px;
-    background: data-uri('../img/price__content-item--included.png') no-repeat;
-
-    @media @tablet {
-      right: calc(~"50% - 15px");
-    }
-  }
-
-  &--not-included:after {
-    background-image: data-uri('../img/price__content-item--not-included.png');
+  &--not-included {
+    background-image: data-uri('../img/price__content-item--not-included.svg');
   }
 }
 
@@ -144,8 +170,9 @@
 .price__options-item {
   font-size: @font-size-base;
   text-transform: none;
+  background-image: none;
 
-  &:after {
-    display: none;
+  @media @desktop {
+    font-size: @font-size-small_desktop;
   }
 }

@@ -2,8 +2,25 @@
   position: relative;
 }
 
+.main-nav {
+  @media @desktop {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    padding: 0 10%;
+    position: absolute;
+    z-index: 2;
+    background: @black-transparent;
+  }
+
+  @media @desktop-full {
+    padding: 0 17%;
+  }
+}
+
 // Modifier to be added by JS:
-.main-nav--hidden {
+.main-nav--closed-menu {
   width: 100%;
   position: absolute;
   z-index: 2;
@@ -14,49 +31,111 @@
   justify-content: space-between;
   align-items: center;
   min-height: 65px;
-  padding: 0 6%;
+  padding: 0 20px 5px;
   font-size: 0;
-  padding-bottom: 5px;
   background: @blue-medium;
 
   @media @tablet {
+    padding: 0 40px;
     min-height: 110px;
   }
 
+  @media @desktop {
+    padding: 0 10px;
+    background: none;
+  }
+
   // Modifier to be added by JS:
-  &--hidden {
+  &--closed-menu {
     padding-bottom: 0px;
     background: @black-transparent;
     box-shadow: @box-shadow-dark;
+
+    @media @desktop {
+      background: transparent;
+    }
+  }
+}
+
+.main-nav__logo {
+  fill: @white;
+
+  &:active {
+    opacity: .3;
+  }
+
+  @media @tablet {
+    display: none;
   }
 }
 
 .main-nav__title {
-  width: 74px;
-  height: 24px;
-  background: url(../img/logo-mobile.png) no-repeat;
-
   @media @tablet {
     width: 146px;
     height: 40px;
-    background: url(../img/logo-tablet.png) no-repeat;
     margin-bottom: 15px;
+    background-image: url(../img/page-header__logo-tablet.png);
+    background-repeat: no-repeat;
+
+    &:active {
+      background-image: url(../img/page-header__logo-tablet.png);
+      opacity: .3;
+    }
+
+    @media @retina-2x {
+      background-image: url(../img/page-header__logo-tablet@2x.png);
+      background-size: 146px auto;
+
+      &:active {
+        background-image: url(../img/page-header__logo-tablet@2x.png);
+        opacity: .3;
+      }
+    }
+  }
+
+  @media @desktop {
+    background-image: url(../img/page-header__logo-desktop.png);
+
+    &:hover {
+      background-image: url(../img/page-header__logo-desktop.png);
+      transition: all 0.15s ease;
+    }
+
+    &:active {
+      background-image: url(../img/page-header__logo-desktop.png);
+      transition: none;
+    }
+
+    @media @retina-2x {
+      background-image: url(../img/page-header__logo-desktop@2x.png);
+      background-size: 146px auto;
+
+      &:hover,
+      &:active {
+        background-image: url(../img/page-header__logo-desktop@2x.png);
+      }
+    }
   }
 }
 
 .main-nav__button {
   font-size: 0;
-  width: 23px;
-  height: 23px;
-  background: data-uri('../img/main-nav__button-cross.png') no-repeat;
-  background-size: 23px auto;
+  width: 50px;
+  height: 25px;
+  background: data-uri('../img/main-nav__button.svg') no-repeat;
 
   // Modifier to be added by JS:
-  &--open {
-    width: 50px;
-    height: 24px;
-    background: data-uri('../img/main-nav__button-hamburger.png') no-repeat;
-    background-size: 50px auto;
+  &--close {
+    background-image: data-uri('../img/main-nav__button--close.svg');
+    background-position: 10px 0;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+
+  @media @desktop {
+    display: none;
   }
 }
 
@@ -69,14 +148,26 @@
   border-bottom: 1px solid @black;
 
   // Modifier to be hidden by JS:
-  &--hidden {
+  &--closed {
     display: none;
+  }
+
+  @media @desktop {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
   }
 }
 
 .main-nav__item {
   background: @blue-medium;
   box-shadow: @box-shadow-dark, @box-shadow-light;
+
+  @media @desktop {
+    background: none;
+    box-shadow: none;
+  }
 }
 
 .main-nav__link {
@@ -86,4 +177,26 @@
   text-transform: uppercase;
   line-height: 65px;
   color: @white;
+
+  &:active {
+    opacity: .3;
+  }
+
+  @media @desktop {
+    line-height: 40px;
+    text-transform: none;
+    font-size: @font-size-medium;
+    font-weight: normal;
+
+    &:hover {
+      color: @white;
+      box-shadow: 0 2px 0 white;
+      transition: all 0.15s ease;
+    }
+
+    &:active {
+      box-shadow: none;
+      transition: none;
+    }
+  }
 }

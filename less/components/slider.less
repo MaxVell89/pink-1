@@ -3,8 +3,11 @@
 }
 
 .slider__toggle {
-  // visibility: hidden;
+  visibility: hidden;
   font-size: 0;
+  @media @desktop {
+    display: none;
+  }
 }
 
 .slider__price-toggle {
@@ -13,20 +16,64 @@
   }
 }
 
+.slider__review-toggle {
+  display: none;
+
+  @media @desktop {
+    display: block;
+    position: absolute;
+    top: 43%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid @blue-medium;
+    opacity: .3;
+    transform: rotate(45deg);
+  }
+
+  &--prev {
+    left: 12%;
+    border-top: none;
+    border-right: none;
+
+    @media @desktop-full {
+      left: 18%;
+    }
+  }
+
+  &--next {
+    right: 12%;
+    border-bottom: none;
+    border-left: none;
+
+    @media @desktop-full {
+      right: 18%;
+    }
+  }
+}
+
 .slider__button {
   display: inline-block;
   vertical-align: middle;
-  box-sizing: content-box;
+  box-sizing: content-box;1
   width: 6px;
   height: 6px;
   margin-right: 20px;
-  background: @gray-dark;
+  background: fade(@blue-medium, 30%);
   border-radius: 50%;
   cursor: pointer;
+
+  &:active {
+    background: fade(@blue-medium, 10%);
+  }
 
   &--active {
     background-color: @white;
     box-shadow: 0 0 0 3px @blue-medium;
+
+    &:hover,
+    &:active {
+      background: @white;
+    }
   }
 
   &:last-child {

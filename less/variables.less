@@ -1,5 +1,9 @@
 @mobile: 320px;
 @tablet: e("screen and (min-width: 700px)");
+@desktop: e("screen and (min-width: 1200px)");
+@desktop-full: e("screen and (min-width: 1440px)");
+
+@retina-2x: e("(min-resolution: 1.5dppx)");
 
 @black: #000;
 @black-transparent: rgba(0, 0, 0, .3);
@@ -24,14 +28,18 @@
 @font-size-medium_tablet: 24px;
 @font-size-big_tablet: 40px;
 
+@font-size-small_desktop: 18px;
+@font-size-medium_desktop: 30px;
+@font-size-big_desktop: 50px;
+
 @light: 300;
 
 .sloped() {
-    background: linear-gradient(-5deg, @gray-light 65px, fade(@gray-light, 0.5) 65px, fade(@gray-light, 0.5) 66px, transparent 66px);
-    @media @tablet {
-        background: linear-gradient(-3deg, @gray-light 65px, fade(@gray-light, 0.5) 65px, fade(@gray-light, 0.5) 66px, transparent 66px);
-    }
-    // @media @desktop {
-    //     background: linear-gradient(-3deg, @gray-light 65px, fade(@gray-light, 0.5) 65px, fade(@gray-light, 0.5) 66px, transparent 66px);
-    // }
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    border-right: 100vw solid @gray-light;
+    border-top: 8vw solid transparent;
+    z-index: -1;
 }
