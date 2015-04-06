@@ -36,6 +36,13 @@ module.exports = function(grunt) {
       }
     },
 
+    concat: {
+      dist: {
+        src: ['node_modules/tap.js/dist/tap.min.js', 'js/map.js', 'js/menu.js'],
+        dest: 'js/script.js',
+      },
+    },
+
     watch: {
       options: {
         livereload: true,
@@ -47,6 +54,10 @@ module.exports = function(grunt) {
       },
       html: {
         files: ['*.html'],
+      },
+      js: {
+        files: ['js/*.js'],
+        tasks: ['concat'],
       }
     },
 
@@ -67,7 +78,7 @@ module.exports = function(grunt) {
         dest: 'css/style.min.css',
         src: ['css/style.css']
       }
-    },
+    }
 
   });
 
@@ -76,11 +87,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('csswring');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   grunt.registerTask('lint', ['lintspaces']);
-  grunt.registerTask('build:development', [ 'less', 'postcss' ]);
+  grunt.registerTask('build:development', [ 'less', 'postcss', 'concat' ]);
   grunt.registerTask('build', [ 'build:development' ]);
   grunt.registerTask('default', [ 'build:development', 'watch' ]);
-  grunt.registerTask('build:production', [ 'less', 'postcss', 'csswring' ]);
+  grunt.registerTask('build:production', [ 'less', 'postcss', 'csswring', 'concat' ]);
 
 };
