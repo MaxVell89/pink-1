@@ -5,21 +5,56 @@
     display: block;
     min-height: 360px;
     padding: 95px 40px 55px 50%;
-    background: url('../img/research_bgr.png') 40px 55px no-repeat;
+    background: url('../img/research-bgr.svg') 10% 55px no-repeat;
+    background-size: 260px auto;
+  }
+
+  @media @desktop {
+    min-height: 470px;
+    padding: 0 10%;
+    background-color: @gray-light;
+    background-position: 14% 45%;
+    background-size: 305px auto;
+  }
+
+  @media @desktop-full {
+    min-height: 480px;
+    padding: 0 17%;
+    background-position: 22% 50%;
+  }
+}
+
+.research__text {
+  @media @desktop {
+    padding: 150px 0 0 40%;
+  }
+
+  @media @desktop-full {
+    padding-top: 160px;
   }
 }
 
 .research__header {
   padding: 0 15px 10px 0;
-  font-size: @font-size-medium_tablet + 6; // 30px;
+  font-size: 30px;
   line-height: 35px;
   font-weight: bold;
+
+  @media @desktop {
+    padding-bottom: 20px;
+  }
 }
 
-.research__text {
+.research__description {
   margin-bottom: 10px;
   line-height: 25px;
   font-size: @font-size-base;
+
+  @media @desktop {
+    margin-bottom: 30px;
+    font-size: @font-size-small_desktop;
+    line-height: 30px;
+  }
 }
 
 .research__link {
@@ -27,4 +62,9 @@
   font-size: @font-size-base;
   text-decoration: underline;
   color: @red;
+
+  @media @desktop {
+    font-size: @font-size-small_desktop;
+    line-height: 30px;
+  }
 }

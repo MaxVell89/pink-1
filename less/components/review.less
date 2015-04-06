@@ -1,20 +1,35 @@
 .review {
-  padding: 45px 20px 105px;
-  .sloped();
+  position: relative;
+  padding: 45px 20px 70px;
+
+  &:after {
+    .sloped();
+  }
 
   @media @tablet {
-    padding: 70px 40px 95px;
+    padding: 70px 40px 80px;
+  }
+
+  @media @desktop {
+    padding-top: 185px;
+    padding-bottom: 95px;
+    background: data-uri('../img/research__quotes.svg') 50% 75px no-repeat;
   }
 }
 
 .review__item {
-  padding-bottom: 40px;
+  padding-bottom: 35px;
   line-height: 30px;
 
   @media @tablet {
     display: flex;
     flex-direction: column;
     padding-bottom: 35px;
+  }
+
+  @media @desktop {
+    max-width: 690px;
+    margin: 0 auto;
   }
 }
 
@@ -27,6 +42,10 @@
     font-size: @font-size-base;
     line-height: 30px;
   }
+
+  @media @desktop {
+    font-size: @font-size-small_desktop;
+  }
 }
 
 .review__header {
@@ -38,8 +57,13 @@
   @media @tablet {
     order: 2;
     margin-bottom: 0px;
-    font-size: @font-size-small_tablet + 2; // 20px
+    font-size: 20px;
     line-height: 30px;
+  }
+
+  @media @desktop {
+    font-size: 24px;
+    line-height: 35px;
   }
 }
 
@@ -47,11 +71,16 @@
   font-size: @font-size-base;
   font-weight: normal;
   color: @blue-medium;
+  quotes: "\00ab" "\00bb";
 
   @media @tablet {
     order: 1;
     margin-bottom: 35px;
     font-size: @font-size-small_tablet;
     line-height: 30px;
+  }
+
+  @media @desktop {
+    quotes: none;
   }
 }
