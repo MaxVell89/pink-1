@@ -8,9 +8,9 @@ module.exports = function(grunt) {
       all: {
         src: [
           '*.html',
-          'less/**/*.less',
+          'source/less/**/*.less',
           '*.js',
-          'js/**/*.js'
+          'source/js/**/*.js'
         ],
         options: {
           newline: true,
@@ -31,15 +31,15 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          'css/style.css': ['less/style.less']
+          'build/css/style.css': ['source/less/style.less']
         }
       }
     },
 
     concat: {
       dist: {
-        src: ['node_modules/tap.js/dist/tap.min.js', 'js/map.js', 'js/menu.js'],
-        dest: 'js/script.js',
+        src: ['node_modules/tap.js/dist/tap.min.js', 'source/js/map.js', 'source/js/menu.js'],
+        dest: 'build/js/script.js',
       },
     },
 
@@ -49,14 +49,14 @@ module.exports = function(grunt) {
         spawn:false
       },
       style: {
-        files: ['less/**/*.less'],
+        files: ['source/less/**/*.less'],
         tasks: ['less'],
       },
       html: {
         files: ['*.html'],
       },
       js: {
-        files: ['js/*.js'],
+        files: ['source/js/*.js'],
         tasks: ['concat'],
       }
     },
@@ -67,7 +67,7 @@ module.exports = function(grunt) {
           require('autoprefixer-core')({ browsers: ['last 2 version'] }).postcss
         ]
       },
-      dist: { src: 'css/style.css' }
+      dist: { src: 'build/css/style.css' }
     },
 
     csswring: {
@@ -75,9 +75,18 @@ module.exports = function(grunt) {
         map: true
       },
       main: {
-        dest: 'css/style.min.css',
-        src: ['css/style.css']
+        dest: 'build/css/style.min.css',
+        src: ['build/css/style.css']
       }
+    },
+
+    copy: {
+      main: {
+          expand: true,
+          cwd: 'source/img/',
+          src: ['**'],
+          dest: 'build/img/'
+      },
     }
 
   });
@@ -88,11 +97,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('csswring');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('lint', ['lintspaces']);
-  grunt.registerTask('build:development', [ 'less', 'postcss', 'concat' ]);
+  grunt.registerTask('build:development', [ 'less', 'postcss', 'concat', 'copy' ]);
   grunt.registerTask('build', [ 'build:development' ]);
   grunt.registerTask('default', [ 'build:development', 'watch' ]);
-  grunt.registerTask('build:production', [ 'less', 'postcss', 'csswring', 'concat' ]);
+  grunt.registerTask('build:production', [ 'less', 'postcss', 'csswring', 'concat', 'copy' ]);
 
 };
