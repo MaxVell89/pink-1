@@ -25,12 +25,9 @@
     content: "";
     width: 100%;
     height: 275px;
-    background: url(../img/features_bgr-mobile.png) 50% 0% no-repeat;
+    background: 50% 0% no-repeat;
     background-size: 157px auto;
-
-    @media @retina-2x {
-      background-image: url(../img/features_bgr-mobile@2x.png);
-    }
+    .retinify("../img/features_bgr-mobile.png");
 
     @media @tablet {
       position: absolute;
@@ -76,33 +73,18 @@
     margin-top: -100px;
     margin-bottom: 0;
     font-size: @font-size-small_desktop;
+    background-size: 292px auto;
 
     &--initial {
-      background-image: url(../img/features__item--initial.png);
+      .retinify("../img/features__item--initial.png");
     }
 
     &--intermediary {
-      background-image: url(../img/features__item--intermediary.png);
+      .retinify("../img/features__item--intermediary.png");
     }
 
     &--result {
-      background-image: url(../img/features__item--result.png);
-    }
-
-    @media @retina-2x {
-      background-size: 292px auto;
-
-      &--initial {
-        background-image: url(../img/features__item--initial@2x.png);
-      }
-
-      &--intermediary {
-        background-image: url(../img/features__item--intermediary@2x.png);
-      }
-
-      &--result {
-        background-image: url(../img/features__item--result@2x.png);
-      }
+      .retinify("../img/features__item--result.png");
     }
   }
 }
