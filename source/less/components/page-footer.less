@@ -23,25 +23,18 @@
   width: 145px;
   height: 40px;
   font-size: 0;
-  background: url(../img/page-footer__logo-tablet.png) no-repeat;
+  background-repeat: no-repeat;
   background-size: 145px auto;
+  .retinify("../img/page-footer__logo-tablet.png");
 
   &:active {
     opacity: .3;
     transition: none;
   }
 
-  @media @retina-2x {
-    background-image: url(../img/page-footer__logo-tablet@2x.png);
-  }
-
   @media @desktop {
     margin-left: 10px;
-    background-image: url(../img/page-footer__logo-desktop.png);
-
-    @media @retina-2x {
-      background-image: url(../img/page-footer__logo-desktop@2x.png);
-    }
+    .retinify("../img/page-footer__logo-desktop.png");
   }
 }
 

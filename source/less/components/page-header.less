@@ -73,47 +73,17 @@
     width: 146px;
     height: 40px;
     margin-bottom: 15px;
-    background-image: url(../img/page-header__logo-tablet.png);
     background-repeat: no-repeat;
+    background-size: 146px auto;
+    .retinify("../img/page-header__logo-tablet.png");
 
     &:active {
-      background-image: url(../img/page-header__logo-tablet.png);
       opacity: .3;
-    }
-
-    @media @retina-2x {
-      background-image: url(../img/page-header__logo-tablet@2x.png);
-      background-size: 146px auto;
-
-      &:active {
-        background-image: url(../img/page-header__logo-tablet@2x.png);
-        opacity: .3;
-      }
     }
   }
 
   @media @desktop {
-    background-image: url(../img/page-header__logo-desktop.png);
-
-    &:hover {
-      background-image: url(../img/page-header__logo-desktop.png);
-      transition: all 0.15s ease;
-    }
-
-    &:active {
-      background-image: url(../img/page-header__logo-desktop.png);
-      transition: none;
-    }
-
-    @media @retina-2x {
-      background-image: url(../img/page-header__logo-desktop@2x.png);
-      background-size: 146px auto;
-
-      &:hover,
-      &:active {
-        background-image: url(../img/page-header__logo-desktop@2x.png);
-      }
-    }
+    .retinify("../img/page-header__logo-desktop.png");
   }
 }
 
