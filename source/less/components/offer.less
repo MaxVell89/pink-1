@@ -7,6 +7,10 @@
     .sloped();
   }
 
+  &--width-fix:after {
+    width: 100%;
+  } // bugfix for Chrome and Opera
+
   @media @tablet {
     padding: 50px 40px 80px;
   }

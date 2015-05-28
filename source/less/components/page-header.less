@@ -30,14 +30,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: relative;
+  z-index: 3;
   min-height: 65px;
-  padding: 0 20px 5px;
+  padding: 20px;
   font-size: 0;
   background: @blue-medium;
 
   @media @tablet {
-    padding: 0 40px;
-    min-height: 110px;
+    padding: 20px 40px;
+    height: 110px;
   }
 
   @media @desktop {
@@ -70,9 +73,10 @@
 
 .main-nav__title {
   @media @tablet {
+    display: block;
     width: 146px;
-    height: 40px;
-    margin-bottom: 15px;
+    height: 65px;
+    // margin-bottom: 15px;
     background-repeat: no-repeat;
     background-size: 146px auto;
     .retinify("../img/page-header__logo-tablet.png");
@@ -88,10 +92,13 @@
 }
 
 .main-nav__button {
+  display: block;
   font-size: 0;
   width: 50px;
   height: 25px;
   background: data-uri('../img/main-nav__button.svg') no-repeat;
+  cursor: pointer;
+  user-select: none;
 
   // Modifier to be added by JS:
   &--close {
@@ -109,12 +116,21 @@
 }
 
 .main-nav__list {
+  position: relative;
+  top: 1px;
+  z-index: 1;
   display: block;
   padding: 0;
   margin: 0;
   list-style: none;
   text-align: center;
   border-bottom: 1px solid @black;
+  animation: appear .3s ease-out;
+
+  @keyframes appear {
+    from { top: -300px; }
+    to   { top: 1px; }
+  }
 
   // Modifier to be hidden by JS:
   &--closed {
@@ -122,10 +138,12 @@
   }
 
   @media @desktop {
-    width: 65%;
+    min-width: 65%;
+    max-width: 80%;
     display: flex;
     justify-content: space-between;
     border-bottom: none;
+    flex-wrap: wrap;
   }
 }
 

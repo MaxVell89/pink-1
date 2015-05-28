@@ -19,6 +19,7 @@
 }
 
 .page-footer__logo {
+  display: block;
   align-self: flex-start;
   width: 145px;
   height: 40px;
@@ -40,9 +41,12 @@
 
 .social-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   min-width: 180px;
+  max-width: 50%;
   margin-left: 40px;
+
 
   @media @desktop {
     margin-left: 70px;
@@ -53,11 +57,16 @@
   display: block;
   width: 52px;
   height: 51px;
+  margin-right: 12px;
   font-size: 0;
   border: 3px solid #e9ebec;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:active {
     opacity: .1;
@@ -106,6 +115,7 @@
 }
 
 .page-footer__copyright-link {
+  display: inline-block;
   width: 27px;
   height: 34px;
   margin: 0 15px;

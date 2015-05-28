@@ -38,7 +38,8 @@ module.exports = function(grunt) {
 
     concat: {
       dist: {
-        src: ['node_modules/tap.js/dist/tap.min.js', 'source/js/map.js', 'source/js/menu.js'],
+        src: ['node_modules/tap.js/dist/tap.min.js', 'node_modules/hammerjs/hammer.min.js', 'node_modules/mustache/mustache.min.js', 'source/js/map.js', 'source/js/slider_review.js',
+              'source/js/slider_price.js', 'source/js/menu.js', 'source/js/contacts_map--widthfix.js'],
         dest: 'build/js/script.js',
       },
     },
@@ -50,7 +51,7 @@ module.exports = function(grunt) {
       },
       style: {
         files: ['source/less/**/*.less'],
-        tasks: ['less'],
+        tasks: ['less', 'postcss']
       },
       html: {
         files: ['*.html'],
@@ -70,13 +71,19 @@ module.exports = function(grunt) {
       dist: { src: 'build/css/style.css' }
     },
 
-    csswring: {
-      options: {
-        map: true
-      },
-      main: {
-        dest: 'build/css/style.min.css',
-        src: ['build/css/style.css']
+    uglify: {
+      my_target: {
+        files: {
+          'build/js/script.min.js': ['build/js/script.js']
+        }
+      }
+    },
+
+    cssmin: {
+      target: {
+        files: {
+          'build/css/style.min.css': ['build/css/style.css']
+        }
       }
     },
 
@@ -95,14 +102,15 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('csswring');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask('lint', ['lintspaces']);
   grunt.registerTask('build:development', [ 'less', 'postcss', 'concat', 'copy' ]);
   grunt.registerTask('build', [ 'build:development' ]);
   grunt.registerTask('default', [ 'build:development', 'watch' ]);
-  grunt.registerTask('build:production', [ 'less', 'postcss', 'csswring', 'concat', 'copy' ]);
+  grunt.registerTask('build:production', [ 'less', 'postcss', 'cssmin', 'uglify', 'concat', 'copy' ]);
 
 };

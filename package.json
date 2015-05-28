@@ -1,5 +1,5 @@
 {
-  "name": "31877-Pink",
+  "name": "Pink",
   "version": "0.0.1",
   "description": "Education project «Pink» for HTML Academy",
   "main": "Gruntfile.js",
@@ -17,17 +17,20 @@
   "homepage": "https://github.com/up-htmlacademy/31877-Pink",
   "devDependencies": {
     "autoprefixer-core": "^5.1.7",
-    "csswring": "^3.0.0",
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.12.3",
     "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-lintspaces": "^0.6.0",
-    "grunt-postcss": "^0.3.0"
+    "grunt-postcss": "^0.3.0",
+    "mustache": "^2.0.0"
   },
   "dependencies": {
     "normalize.css": "^3.0.2",
-    "tap.js": "git://github.com/pukhalski/tap#1.0.4"
+    "tap.js": "git://github.com/pukhalski/tap#1.0.4",
+    "hammerjs": "git://github.com/hammerjs/hammer.js#2.0.4"
   }
 }

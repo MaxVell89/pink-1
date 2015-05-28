@@ -1,13 +1,17 @@
 .review {
   position: relative;
-  padding: 45px 20px 70px;
+  padding: 45px 0 70px;
 
   &:after {
     .sloped();
   }
 
+  &--width-fix:after {
+    width: 100%;
+  } // bugfix for Chrome and Opera
+
   @media @tablet {
-    padding: 70px 40px 80px;
+    padding: 70px 0 80px;
   }
 
   @media @desktop {
@@ -17,17 +21,24 @@
   }
 }
 
+.review__inner-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .review__item {
-  padding-bottom: 35px;
+  padding: 0 20px 35px;
   line-height: 30px;
 
   @media @tablet {
     display: flex;
     flex-direction: column;
-    padding-bottom: 35px;
+    padding: 0 40px 35px;
   }
 
   @media @desktop {
+    box-sizing: content-box;
     max-width: 690px;
     margin: 0 auto;
   }

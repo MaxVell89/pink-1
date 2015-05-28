@@ -114,16 +114,33 @@
   position: relative;
   height: 195px;
   margin-top: 35px;
-  background-image: url(../img/contacts__map_bgr-desktop.jpg);
+  background: url(../img/contacts__map_bgr-mobile.jpg) 50% 70% no-repeat;
 
   @media @tablet {
     height: 380px;
     margin-top: 25px;
+    background-image: url(../img/contacts__map_bgr-tablet.jpg);
+    background-position-y: 60%;
   }
 
   @media @desktop {
     height: 525px;
     margin-top: 0;
+    background-image: url(../img/contacts__map_bgr-desktop.jpg);
+
+    @media @retina-2x {
+      background-image: url(../img/contacts__map_bgr-desktop@2x.jpg);
+      background-position-x: 40%;
+    }
+  }
+
+  @media @desktop-full {
+      background-image: url(../img/contacts__map_bgr-desktop@2x.jpg);
+      background-position-x: 40%;
+  }
+
+  &--js {
+    background: none;
   }
 
   &:before {
@@ -131,6 +148,7 @@
     content: "";
     position: absolute;
     z-index: 1;
+    width: 100%;
     border-right: 50vw solid transparent;
     border-top: 35px solid @white;
     border-left: 50vw solid transparent;
@@ -143,4 +161,8 @@
       border-top-width: 125px;
     }
   }
+
+  &--width-fix:before {
+    width: 100%;
+  } // bugfix for mobile Chrome and Opera
 }

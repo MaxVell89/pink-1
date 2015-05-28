@@ -5,8 +5,11 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1">
   <title>HTML Academy: Pink</title>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="build/css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="build/css/style.min.css">
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
 </head>
 
 <body>
@@ -22,17 +25,17 @@
   </svg>
 
   <!-- Header -->
-  <header class="page-header">
+  <header class="page-header" id="menu">
     <nav class="main-nav">
       <div class="main-nav__menu-header">
-        <a class="main-nav__title" href="#"><svg class="main-nav__logo" width="74" height="24"><use xlink:href="#mobile-logo"></use></svg>Pink</a>
-        <a class="main-nav__button" href="#">Menu</a>
+        <a class="main-nav__title" href="index.html"><svg class="main-nav__logo" width="74" height="24"><use xlink:href="#mobile-logo"></use></svg>Pink</a>
+        <span class="main-nav__button">Menu</span>
       </div>
       <ul class="main-nav__list">
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Информация</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Возможности</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Отзывы</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Стоимость</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#info">Информация</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#features">Возможности</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#reviews">Отзывы</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#price">Стоимость</a></li>
       </ul>
     </nav>
   </header>
@@ -48,24 +51,24 @@
 
       <!-- Download buttons -->
       <section class="promo-download">
-        <a class="promo-download__main-link" href="#">Скачать приложение</a>
+        <a class="promo-download__main-link" href="index.html">Скачать приложение</a>
         <div class="promo-download__buttons">
-          <a class="promo-download__button promo-download__button--apple" href="#">Apple</a>
-          <a class="promo-download__button promo-download__button--android" href="#">Android</a>
-          <a class="promo-download__button promo-download__button--winphone" href="#">Windows Phone</a>
+          <a class="promo-download__button promo-download__button--apple" href="index.html">Apple</a>
+          <a class="promo-download__button promo-download__button--android" href="index.html">Android</a>
+          <a class="promo-download__button promo-download__button--winphone" href="index.html">Windows Phone</a>
         </div>
         <p class="promo-download__text">Доступно для iPhone, iPad, Android,<br> Windows Phone, Mac OS, Windows 8</p>
       </section>
     </section>
 
     <!-- Product offers -->
-    <section class="offer">
+    <section class="offer" id="info">
       <p class="offer__title">Устали от серости мегаполиса?</p>
       <p class="offer__title">Нам есть, что вам<br> предложить!</p>
     </section>
 
     <!-- Product features -->
-    <section class="features">
+    <section class="features" id="features">
       <div class="features__item features__item--initial">
         <p class="features__header">Поднимает настроение</p>
         <p class="features__descr">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
@@ -91,26 +94,37 @@
     </section>
 
     <!-- Reviews -->
-    <section class="review slider">
+    <section class="review slider" id="reviews">
+      <div class="review__inner-wrap">
+        <article class="review__item slider__slide slider__slide--active">
+          <p class="review__header">Николай Петров</p>
+          <p class="review__description">25 лет, водитель трамвая</p>
+          <q class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
+        </article>
+        <article class="review__item slider__slide">
+          <p class="review__header">Петр Васечкин</p>
+          <p class="review__description">25 лет, водитель трамвая</p>
+          <q class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
+        </article>
+        <article class="review__item slider__slide">
+          <p class="review__header">Василий Николаев</p>
+          <p class="review__description">25 лет, водитель трамвая</p>
+          <q class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+          А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
+        </article>
+      </div>
       <span class="slider__review-toggle slider__review-toggle--prev"></span>
-      <article class="review__item slider__slide">
-        <p class="review__header">Николай Петров</p>
-        <p class="review__description">25 лет, водитель трамвая</p>
-        <q class="review__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-        А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
-      </article>
       <span class="slider__review-toggle slider__review-toggle--next"></span>
       <!-- Hidden by CSS, to be activated by JS -->
-      <div class="slider__toggle">
-        <span class="slider__button slider__button--active"></span>
-        <span class="slider__button"></span>
-        <span class="slider__button"></span>
-      </div>
+      <div class="slider__toggle"></div>
     </section>
 
     <!-- Price options -->
-    <section class="price slider">
-      <div class="price__price-table">
+    <section class="price slider" id="price">
+      <div class="price__price-table slider__price-wrap">
+
         <div class="price__item price__options">
           <ul class="price__content-list">
             <li class="price__content-item price__options-item">Розовый фильтр</li>
@@ -118,7 +132,8 @@
             <li class="price__content-item price__options-item">Комментарии</li>
           </ul>
         </div>
-        <div class="price__item slider__slide">
+
+        <div class="price__item slider__price-item">
           <div class="price__header">
             <p class="price__title">База</p>
             <p class="price__cost">1,99 USD</p>
@@ -129,7 +144,8 @@
             <li class="price__content-item price__content-item--not-included">Комментарии</li>
           </ul>
         </div>
-        <div class="price__item price__item--hit slider__slide">
+
+        <div class="price__item price__item--hit slider__price-item">
           <div class="price__header">
             <p class="price__title">Стандарт</p>
             <p class="price__cost">3,99 USD</p>
@@ -140,7 +156,8 @@
             <li class="price__content-item price__content-item--not-included">Комментарии</li>
           </ul>
         </div>
-        <div class="price__item slider__slide">
+
+        <div class="price__item slider__price-item">
           <div class="price__header">
             <p class="price__title">Анлим</p>
             <p class="price__cost">9,99 USD</p>
@@ -151,14 +168,9 @@
             <li class="price__content-item">Комментарии</li>
           </ul>
         </div>
-        <!-- Hidden by CSS, to be activated by JS -->
-        <div class="slider__toggle slider__price-toggle">
-          <span class="slider__button"></span>
-          <span class="slider__button slider__button--active"></span>
-          <span class="slider__button"></span>
-        </div>
       </div>
-    </section>
+      <!-- Hidden by CSS, to be activated by JS -->
+      <div class="slider__toggle slider__price-toggle"></div>
     </section>
 
     <!-- Contacts -->
@@ -180,29 +192,29 @@
           </p>
         </div>
       </div>
-      <div class="contacts__map" id="map-canvas"></div>
+      <div class="contacts__map"></div>
     </section>
-
   </main>
 
+  <!-- Footer -->
   <footer class="page-footer">
-    <a class="page-footer__logo" href="#">Pink</a>
+    <a class="page-footer__logo" href="index.html">Pink</a>
     <div class="social-links">
-      <a class="social-links__item social-links__item--twitter" href="#">Twitter</a>
-      <a class="social-links__item social-links__item--fb" href="#">Facebook</a>
-      <a class="social-links__item social-links__item--youtube" href="#">YouTube</a>
+      <a class="social-links__item social-links__item--twitter" href="https://twitter.com/" target="_blank">Twitter</a>
+      <a class="social-links__item social-links__item--fb" href="https://www.facebook.com/" target="_blank">Facebook</a>
+      <a class="social-links__item social-links__item--youtube" href="http://www.youtube.com/" target="_blank">YouTube</a>
     </div>
     <div class="page-footer__copyright">
-      <p class="page-footer__copyright-text">Website by <a class="page-footer__copyright-link" href="#">
+      <p class="page-footer__copyright-text">Website by <a class="page-footer__copyright-link" href="http://glukhanko.ru/" target="_blank">
       <svg class="page-footer__copyright-icon" width="27" height="34"><use xlink:href="#glukhanko-icon"></use></svg>Anton Glukhanko</a>
-      for <a class="page-footer__copyright-link" href="#"><svg class="page-footer__copyright-icon" width="27" height="34">
+      for <a class="page-footer__copyright-link" href="https://htmlacademy.ru/" target="_blank"><svg class="page-footer__copyright-icon" width="27" height="34">
       <use xlink:href="#htmlacademy-icon"></use></svg>HTML Academy</a></p>
     </div>
   </footer>
 
   <script src="http://127.0.0.1:35729/livereload.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
-  <script src="build/js/script.js"></script>
+  <script src="build/js/script.min.js"></script>
 
 </body>
 </html>
